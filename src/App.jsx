@@ -3,6 +3,7 @@ import ManliestThings from './pages/ManliestThings/ManliestThings'
 import StyledThings from './pages/StyledThings/StyledThings'
 import SillyThings from './pages/SillyThings/SillyThings'
 import Landing from './pages/Landing/Landing'
+import MichelleThings from './pages/MichelleThings/MichelleThings'
 
 const App = () => {
   const bensThings = [
@@ -62,6 +63,14 @@ const App = () => {
     },
   ]
 
+  const michelleThings = [
+    {
+      name: "The Best Food",
+      image: "https://media1.tenor.com/m/gRQK2IIbN7EAAAAC/lotr-sam.gif",
+      attributes: ["boil'em", "mash'em", "stick'em in a stew"]
+    }
+  ]
+
   return (
     <Routes>
       {/* All the <Route> components should live here */}
@@ -77,6 +86,10 @@ const App = () => {
       <Route
         path="/the-silly-things"
         element={<SillyThings things={huntersThings} />}
+      />
+      <Route
+        path="/Michelle-things"
+        element={<MichelleThings things={michelleThings} />}
       />
     </Routes>
   )
