@@ -89,7 +89,7 @@ const App = () => {
       />
       <Route
         path="/aryas-things"
-        element={<SillyThings things={aryasThings} />}
+        element={<AryasThings things={aryasThings} />}
       />
     </Routes>
   )
