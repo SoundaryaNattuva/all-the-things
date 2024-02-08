@@ -4,6 +4,7 @@ import KrystinaThings from './pages/KrystinaThings/KrystinaThings'
 import StyledThings from './pages/StyledThings/StyledThings'
 import SillyThings from './pages/SillyThings/SillyThings'
 import Landing from './pages/Landing/Landing'
+import AryasThings from './pages/AryasThings/AryasThings'
 import MichelleThings from './pages/MichelleThings/MichelleThings'
 
 const App = () => {
@@ -64,6 +65,15 @@ const App = () => {
     },
   ]
 
+
+  const aryasThings = [
+    {
+      name: "matcha",
+      image: "https://imgs.xkcd.com/comics/matcha.png",  
+      attributes: ["green", "tasty", "clouds", "creamy"],
+    },
+    ]
+
   const krystinaThings = [
     {
       name: 'puppies',
@@ -98,6 +108,7 @@ const App = () => {
       image: "https://media1.tenor.com/m/gRQK2IIbN7EAAAAC/lotr-sam.gif",
       attributes: ["boil'em", "mash'em", "stick'em in a stew"]
     }
+
   ]
 
   return (
@@ -121,9 +132,14 @@ const App = () => {
         element={<SillyThings things={huntersThings} />}
       />
       <Route
+        path="/aryas-things"
+        element={<AryasThings things={aryasThings} />}
+        />
+       
+       <Route
         path="/Michelle-things"
         element={<MichelleThings things={michelleThings} />}
-      />
+        />
     </Routes>
   )
 }
