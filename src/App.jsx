@@ -1,5 +1,6 @@
 import { Routes, Route } from 'react-router-dom'
 import ManliestThings from './pages/ManliestThings/ManliestThings'
+import KrystinaThings from './pages/KrystinaThings/KrystinaThings'
 import StyledThings from './pages/StyledThings/StyledThings'
 import SillyThings from './pages/SillyThings/SillyThings'
 import Landing from './pages/Landing/Landing'
@@ -63,6 +64,34 @@ const App = () => {
     },
   ]
 
+  const krystinaThings = [
+    {
+      name: 'puppies',
+      image:
+        'https://images.unsplash.com/photo-1587132137056-bfbf0166836e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60',
+      attributes: [
+        'cute',
+        'fluffy',
+        'fun',
+      ],
+    },
+    {
+      name: 'taco',
+      image:
+        'https://images.unsplash.com/photo-1545093149-618ce3bcf49d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1234&q=80',
+      attributes: [
+        'yummy in my tummy',
+        'salsas may vary',
+        'definitely a taco',
+        'very edible',
+      ],
+    },
+    {
+      name: 'waffles',
+      image: 'https://i.imgur.com/3BmfSOA.png',
+      attributes: ['crispy', 'not Windows', 'not macOS', 'Penguins?'],
+    },
+  ]
   const michelleThings = [
     {
       name: "The Best Food",
@@ -78,6 +107,10 @@ const App = () => {
       <Route
         path="/the-manliest-things"
         element={<ManliestThings things={bensThings} />}
+      />
+      <Route
+        path="/the-krystina-things"
+        element={<KrystinaThings things={krystinaThings} />}
       />
       <Route
         path="/the-well-styled-things"
